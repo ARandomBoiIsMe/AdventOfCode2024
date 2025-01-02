@@ -4,8 +4,8 @@ def part_one(first: list, second: list):
     first.sort()
     second.sort()
 
-    for i in range(len(first)):
-        sum_of_distances += abs(first[i] - second[i])
+    for element in zip(first, second):
+        sum_of_distances += abs(element[0] - element[1])
 
     print("Part One:", sum_of_distances)
 
